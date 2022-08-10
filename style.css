@@ -1,0 +1,295 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+.dòng{
+    display: flex;
+    justify-content: center;
+}
+.dòng img:hover {
+    cursor: pointer;
+}
+.intro{
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    margin-top: 70px;
+}
+.intro video{
+    width: 100%;
+}
+.title h1{
+    font-size: 30px;
+    padding: 5px 27px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+    background-color: rgb(236, 144, 7);
+}
+.img{
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #999;
+    position: relative;
+}
+.title{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.pikachu{
+    background-color: #BDFEDA;
+}
+.main_{
+    width: 768px;
+
+    height: 100vh;
+    margin: 0 auto;
+}
+.main_ video{
+    border-radius: 20px;
+    width: 100%;
+    margin: 40px 0;
+}
+.pikachu_img{
+    z-index: 9;
+    transition: all 1s linear;
+    position: relative;
+}
+._sound_icon{
+    position: absolute;
+    bottom: 15%;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 100%;
+    margin-left: 20px;
+}
+.hd{
+    position: absolute;
+    bottom: 15%;
+    right: 10px;
+    z-index: 9;
+    color: #fff;
+    text-align: center;
+}
+.title_{
+    position: absolute;
+    top: 28%;
+    color: rgb(255, 204, 0);
+}
+.title_ h1{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    text-shadow: 0 0 5px #fff;
+    transform: rotate(14deg);
+    letter-spacing: 20px;
+    margin-left: 20px;
+}
+.title_ p{
+    text-decoration:underline;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-weight: 900;
+    margin-left: 20px;
+}
+.play{
+    position: absolute;
+    border-radius: 20px;
+    top: 70%;
+    color: #fff;
+    letter-spacing: 4px;
+    background-color: rgb(255, 204, 0);
+    left: 50%;
+    padding: 10px 20px;
+    transform: translate(-50%,-50%);
+}
+.play:hover{
+    cursor: pointer;
+    opacity: .9;
+    transition:  opacity .3s linear;
+}
+.pikachu{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition:  transform .9s;
+    transform: translate(-100%);
+}
+.active{
+    transform: translate(0%);
+    display: block;
+}
+.active_main{
+    display: none;
+}
+.active_test{
+
+}
+.load_img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    opacity: 1;
+}
+.load_img img{
+    max-width: 200px;
+    width: 100%;
+    object-fit: contain;
+}
+.load_page{
+    position: relative;
+}
+.main{
+    position: relative;
+    z-index: 9;
+}
+.main_{
+    position: relative;
+}
+.game{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    opacity: 1;
+    transform: translateY(-100%);
+    transition:  transform .5s;
+}
+.laoding{
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+    z-index: -1;
+}
+.gamemer{
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background:linear-gradient(to right,#ee9ca7,#ffdde1);
+}
+@keyframes load{
+    form{
+        opacity: 0.2;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.load_game{
+    transform: translateX(0%);
+    animation: load;
+}
+.remove_intro{
+    opacity: 0;
+    z-index: -1;
+}
+.add_game_{
+    transition: all .3s linear;
+    opacity: 1;
+    z-index: 9;
+}
+.random{
+    position: absolute;
+    bottom: 15%;
+    color: #fff;
+    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.time{
+    font-size: 13px;
+    margin: 20px 0px;
+}
+
+.pokemon_viewer{
+    margin: 20px ;
+}
+.time{
+    color: #fff;
+    margin:0  20px;
+}
+.timer{
+    display: flex;
+    gap: 0 20px;
+    padding: 20px;
+}
+.ending{
+    position: relative;
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.ending::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,#fb0094,#0000ff,#00ff00,#ffff00,#fb0094,#0000ff,#00ff00,#ffff00,
+    #fb0094);
+    animation: animate 600s linear infinite;
+    background-size: 500%;
+    filter: blur(20px);
+    box-shadow: 0 0 5px #999;
+}   
+@keyframes animate{
+    0%{
+        width: 100%;
+        background-position: 0%;
+    }
+    100%{
+        width: 0%;
+        background-position: 500% 0;
+    }
+}
+.pokemon_img{
+    overflow: hidden;
+    /* display: grid;
+    grid-template-columns: repeat(18,1fr); */
+}
+.doilai{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.doilai:hover{
+    color: orange;
+    cursor: pointer;
+}
+.random:hover{
+    color: orange;
+    cursor: pointer;
+}
+._sound_icon:hover{
+    cursor: pointer;
+}
+.active_pikachu{
+    opacity: .5;
+}
+.ds_none{
+    opacity: 0;
+}
